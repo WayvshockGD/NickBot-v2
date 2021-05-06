@@ -1,6 +1,7 @@
 import Eris from "eris";
 import { prefix } from "../../config";
-import Help from "../structures/Help";
+import GuildConfig from "../core/config/GuildConfig";
+import NicknameConfig from "../core/config/NicknameConfig";
 
 class CommandHandler {
     constructor(message: Eris.Message, client: Eris.Client, rest: Eris.Client) {
@@ -15,8 +16,18 @@ class CommandHandler {
 
         // @ts-ignore
         let guild = message.channel.guild;
+        let guildConfig = new GuildConfig();
+        let nickConfig = new NicknameConfig();
 
-        command.execute({ message, args, client, rest, guild });
+        command.execute({ 
+            message, 
+            args, 
+            client, 
+            rest, 
+            guild, 
+            guildConfig,
+            nickConfig
+        });
     }
 }
 

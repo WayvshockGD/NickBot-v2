@@ -10,7 +10,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "chalk": "^3.0.0",
-    "eris": "^0.15.1"
+    "eris": "^0.15.1",
+    "mongoose": "^5.12.7"
   },
   "devDependencies": {
     "@types/node": "^15.0.2",

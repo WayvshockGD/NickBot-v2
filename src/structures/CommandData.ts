@@ -1,4 +1,6 @@
 import Eris from "eris";
+import GuildConfig from "../core/config/GuildConfig";
+import NicknameConfig from "../core/config/NicknameConfig";
 
 export default interface CommandData {
     message: Eris.Message;
@@ -7,4 +9,6 @@ export default interface CommandData {
     client: Eris.Client;
     rest: Eris.Client
     guild: Eris.Guild;
+    guildConfig: GuildConfig;
+    nicknameConfig: NicknameConfig;
 }

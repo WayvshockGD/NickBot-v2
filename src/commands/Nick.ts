@@ -11,6 +11,10 @@ class Nick extends Command {
 
     public execute({ message, client, args }: CommandData) {
 
+        if (!args.join(' ').slice(this.name.length +1)) {
+            return this.sendMessage(message, ':x:  |  There were no arguments present.');
+        };
+
         new this.utils.Log(client, { 
             type: 'Nickname',
 

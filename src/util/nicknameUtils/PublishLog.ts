@@ -4,7 +4,7 @@ type embedType = 'ModAction' | 'NickAction' | 'Reject' | 'Accept' | 'Nickname';
 
 interface EmbedLayout {
     type: embedType;
-    member: Eris.Member;
+    member: Eris.User;
     nickname: string;
     message: Eris.Message;
     channelID: string;
